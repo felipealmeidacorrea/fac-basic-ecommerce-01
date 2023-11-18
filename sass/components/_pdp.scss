@@ -18,7 +18,8 @@
   height: fit-content;
   flex-flow: column;
   position: sticky;
-  flex-shrink: 0;
+  max-width: 100%;
+  flex-shrink: 1;
   display: flex;
   flex-grow: 1;
   top: 128.4px;
@@ -29,6 +30,11 @@
   flex-flow: column;
   display: flex;
   gap: 16px;
+}
+
+.pdp-main-content__title {
+  @include text(32px, $text-pure-500, 700);
+  @include multiline-ellipsis(32px, 1.1, 2);
 }
 
 .pdp-main-content__info-area__small {
@@ -44,13 +50,14 @@
 }
 
 .qtt-input {
+  box-shadow: 0 4px 6px 0 #00000015;
   border-radius: 6px;
-  border: 1px solid;
+  border: none;
   display: flex;
   height: 40px;
 
   button {
-    background-color: transparent;
+    background-color: $secondary-pure-500;
     justify-content: center;
     box-sizing: border-box;
     align-items: center;
@@ -58,18 +65,27 @@
     display: flex;
     border: none;
 
+    &:hover {
+      filter: brightness(1.2);
+    }
+
     &#minus,
     &#minusc {
-      border-right: 1px solid;
+      border-radius: 6px 0 0 6px;
     }
 
     &#plus,
     &#plusc {
-      border-left: 1px solid;
+      border-radius:  0 6px 6px 0;
+    }
+
+    .material-symbols-outlined {
+      color: $white;
     }
   }
 
   input {
+    @include text(16px, $black, 700);
     background-color: transparent;
     box-sizing: border-box;
     text-align: center;
@@ -86,4 +102,8 @@
       margin: 0;
     }
   }
+}
+
+.pdp-main-content__buy-button {
+  box-shadow: 0 4px 6px 0 #00000015;
 }

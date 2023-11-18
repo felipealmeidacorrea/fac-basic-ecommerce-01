@@ -1,5 +1,5 @@
 .header-container {
-  background-color: white;
+  background-color: $white;
   margin-bottom: 60px;
 }
 
@@ -11,10 +11,10 @@
 }
 
 .top-bar {
-  background-color: gray;
+  background-color: $primary-pure-500;
 
   span {
-    @include text1();
+    @extend %text1;
   }
 }
 
@@ -38,7 +38,7 @@
 }
 
 .header-menu {
-  background-color: gray;
+  background-color: $primary-pure-500;
 }
 
 .header-menu__inner__list {
@@ -64,7 +64,7 @@
 
 .search-bar-inner {
   @extend %border;
-  background-color: #cecece;
+  background-color: $text-light-200;
   display: flex;
   height: 40px;
 }
@@ -72,7 +72,7 @@
 .search-bar__input-box {
   @extend %border;
   border-radius: 6px 0 0 6px;
-  background-color: #cecece;
+  background-color: $text-light-200;
   padding: 0 8px;
   flex-grow: 1;
   border: none;
@@ -91,6 +91,10 @@
   display: flex;
   height: 40px;
   width: 40px;
+
+  .material-symbols-outlined{
+    color: $text-dark-400;
+  }
 }
 
 .header-actions {
@@ -112,7 +116,7 @@
 }
 
 .cart-qtt {
-  background-color: gray;
+  background-color: $primary-pure-500;
   position: absolute;
   border-radius: 100%;
   padding: 1px 6px;
