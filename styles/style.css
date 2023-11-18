@@ -687,10 +687,25 @@ body * {
 .bread-crumb-container span {
   display: flex;
 }
+.bread-crumb-container .home, .bread-crumb-container .term {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: #353535;
+}
+.bread-crumb-container .home a, .bread-crumb-container .term a {
+  text-decoration: none;
+}
+.bread-crumb-container .material-symbols-outlined {
+  color: #777777;
+}
+.bread-crumb-container .term {
+  color: #002A52;
+}
 
 .filters-and-order-by {
   justify-content: flex-start;
-  background-color: gray;
+  background-color: #cccccc;
   border-radius: 6px;
   padding: 8px 12px;
   flex-wrap: wrap;
@@ -705,11 +720,20 @@ body * {
   padding: 0 12px;
   display: flex;
   height: 25px;
+  gap: 16px;
 }
 .filters-and-order-by__box label {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: #353535;
   padding-bottom: 2px;
 }
 .filters-and-order-by__box select {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: #777777;
   background-color: transparent;
   outline: none;
   display: flex;
