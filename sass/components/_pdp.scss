@@ -36,12 +36,29 @@
   @include text(32px, $text-pure-500, 700);
   @include multiline-ellipsis(32px, 1.1, 2);
 }
+.pdp-main-content__id {
+  @include text(14px, $text-dark-400, 400);
+}
 
 .pdp-main-content__info-area__small {
   flex-flow: column;
   max-width: 310px;
   display: flex;
   gap: 32px;
+}
+
+.pdp-main-content__desc__text {
+  @include text(16px, $text-pure-500, 400);
+  @include multiline-ellipsis(16px, 1.1, 2);
+}
+
+.pdp-main-content__see-more {
+  @include text(16px, $text-pure-500, 700);
+  line-height: 1.5;
+}
+
+.pdp-main-content__price {
+  @include text(32px, $black, 700);
 }
 
 .pdp-main-content__buy-area {
@@ -76,7 +93,7 @@
 
     &#plus,
     &#plusc {
-      border-radius:  0 6px 6px 0;
+      border-radius: 0 6px 6px 0;
     }
 
     .material-symbols-outlined {
@@ -106,4 +123,15 @@
 
 .pdp-main-content__buy-button {
   box-shadow: 0 4px 6px 0 #00000015;
+}
+
+.pdp-details-area {
+  h3 {
+    @include text(24px, $text-pure-500, 700);
+    margin-bottom: 16px
+  }
+
+  p {
+    @include text(16px, $text-pure-500, 400);
+  }
 }

@@ -1,6 +1,7 @@
 html {
-  scroll-padding: 128.4px;
   background-color: $color-c-1;
+  scroll-padding: 128.4px;
+  scroll-behavior: smooth;
 }
 
 body {
