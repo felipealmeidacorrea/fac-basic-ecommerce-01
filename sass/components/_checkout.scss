@@ -84,8 +84,8 @@
     padding: 0 8px;
     outline: none;
     border: none;
-    flex-grow: 1;
     height: 40px;
+    width: 178px;
 
     &::placeholder {
       @include text(16px, $text-dark-400, bold);
@@ -104,7 +104,7 @@
     height: 40px;
 
     &:hover {
-        filter: brightness(1.05);
+      filter: brightness(1.05);
     }
   }
 }
@@ -151,4 +151,120 @@
   display: flex;
   height: 40px;
   width: 100%;
+}
+
+.summary-product-list {
+  flex-flow: column;
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.summary-product-list__list {
+  flex-flow: column;
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.summary-product-list__list__item {
+  justify-content: space-between;
+  background-color: $white;
+  border-radius: 3px;
+  display: flex;
+  padding: 8px;
+  width: 100%;
+  gap: 16px;
+}
+
+.summary-product-list__list__item__info {
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-flow: column;
+  display: flex;
+  gap: 16px;
+}
+
+.summary-product-list__list__item__info__name {
+  @include text(16px, $text-pure-500, bold);
+  @include multiline-ellipsis(16px, 1.1, 1);
+}
+
+.summary-product-list__list__item__info__price {
+  @include text(16px, $black, bold);
+}
+
+.checkout-form-boxes {
+  flex-flow: column;
+  display: flex;
+  flex-grow: 1;
+  gap: 24px;
+}
+
+.checkout-box.forms {
+  flex-flow: column;
+  align-items: flex-start;
+  display: flex;
+  gap: 32px;
+}
+
+.checkout-form-boxes__title {
+  @include text(16px, $black, bold);
+  align-items: center;
+  display: flex;
+  gap: 16px;
+
+  strong {
+    background-color: $secondary-pure-500;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    color: $white;
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.checkout-form-boxes__line {
+  align-items: flex-end;
+  display: flex;
+  width: 100%;
+  gap: 32px;
+}
+
+.checkout-form-boxes__line__input {
+  flex-grow: 1;
+  flex-flow: column;
+  display: flex;
+  gap: 12px;
+
+  &.installments {
+    max-width: 185px;
+  }
+
+  &.expiration-date {
+    max-width: 159px;
+  }
+
+  &.cvv {
+    max-width: 130px;
+  }
+
+  input,
+  select {
+    border-radius: 6px;
+    padding: 0 8px;
+    outline: none;
+    border: none;
+    height: 40px;
+  }
+}
+
+.billingcheckbox {
+  display: flex;
+  &:checked {
+    background-color: $secondary-pure-500;
+    content: "\2713";
+  }
 }
