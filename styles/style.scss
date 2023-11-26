@@ -13,3 +13,7 @@
 @import "../sass/components/pdp";
 @import "../sass/components/plp";
 @import "../sass/components/minicart-drawer";
+@import "../sass/components/checkout";
+
+// Modificadores vão por último para garantir a hierarquia
+@import "../sass/components/modifiers";

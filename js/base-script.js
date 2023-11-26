@@ -22,6 +22,15 @@ $(document).ready(function () {
     }
   }
 
+  // Para os elementos com "c" no final
+  setupCounter("minusc", "plusc", "inputc");
+
+  // Para os elementos sem "c" no final
+  setupCounter("minus", "plus", "input");
+
+   // Para os elementos sem "c" no final
+   setupCounter("minusa", "plusa", "inputa");
+
   function drawer() {
     // Seletor para o botão com o ID "minicartIcon"
     var openButton = $("#minicartIcon");
@@ -71,11 +80,41 @@ $(document).ready(function () {
     // Mais funcionalidades aqui conforme necessário
   }
 
-  // Para os elementos com "c" no final
-  setupCounter("minusc", "plusc", "inputc");
+  // Função para formatar o input no padrão desejado
+  function formatZipCode(input) {
+    // Remove todos os caracteres que não são dígitos
+    let sanitizedInput = input.replace(/\D/g, "");
 
-  // Para os elementos sem "c" no final
-  setupCounter("minus", "plus", "input");
+    // Adiciona o hífen no quinto caractere se o comprimento for maior que 5
+    if (sanitizedInput.length > 5) {
+      sanitizedInput = sanitizedInput.replace(/(\d{5})(\d{0,3})/, "$1-$2");
+    }
+
+    // Limita o comprimento total para 9 caracteres
+    return sanitizedInput.slice(0, 9);
+  }
+
+  // Pega o elemento com o ID "shippingField"
+  var shippingField = document.getElementById("shippingField");
+
+  // Verifica se o elemento existe antes de usar o manipulador
+  if (shippingField) {
+    // Manipulador de evento q formata o input enquanto o usuário escreve
+    shippingField.addEventListener("input", function (event) {
+      // Pega o valor atual do input
+      let inputValue = event.target.value;
+
+      // Formata o valor como a gente quer
+      let formattedValue = formatZipCode(inputValue);
+
+      // Atualiza o valor do input
+      event.target.value = formattedValue;
+    });
+  } else {
+    console.log(
+      "Elemento #shippingField não encontrado. A função não será executada."
+    );
+  }
 
   drawer();
 });

@@ -13,7 +13,7 @@
   border: none;
 }
 
-.minicart-drawer__product-list__actions__remove, .minicart-drawer__header__close, .slick-dots li button, .header-actions__minicart, .search-bar__submit-button {
+.action-remove, .minicart-drawer__header__close, .slick-dots li button, .header-actions__minicart, .search-bar__submit-button {
   background: none;
   cursor: pointer;
   outline: none;
@@ -22,7 +22,7 @@
   padding: 0;
   margin: 0;
 }
-.minicart-drawer__product-list__actions__remove:active, .minicart-drawer__header__close:active, .slick-dots li button:active, .header-actions__minicart:active, .search-bar__submit-button:active, .minicart-drawer__product-list__actions__remove:focus, .minicart-drawer__header__close:focus, .slick-dots li button:focus, .header-actions__minicart:focus, .search-bar__submit-button:focus, .minicart-drawer__product-list__actions__remove:hover, .minicart-drawer__header__close:hover, .slick-dots li button:hover, .header-actions__minicart:hover, .search-bar__submit-button:hover {
+.action-remove:active, .minicart-drawer__header__close:active, .slick-dots li button:active, .header-actions__minicart:active, .search-bar__submit-button:active, .action-remove:focus, .minicart-drawer__header__close:focus, .slick-dots li button:focus, .header-actions__minicart:focus, .search-bar__submit-button:focus, .action-remove:hover, .minicart-drawer__header__close:hover, .slick-dots li button:hover, .header-actions__minicart:hover, .search-bar__submit-button:hover {
   background: none;
   border: none;
 }
@@ -622,10 +622,10 @@ body * {
 .qtt-input button:hover {
   filter: brightness(1.2);
 }
-.qtt-input button#minus, .qtt-input button#minusc {
+.qtt-input button#minus, .qtt-input button#minusc, .qtt-input button#minusa {
   border-radius: 6px 0 0 6px;
 }
-.qtt-input button#plus, .qtt-input button#plusc {
+.qtt-input button#plus, .qtt-input button#plusc, .qtt-input button#plusa {
   border-radius: 0 6px 6px 0;
 }
 .qtt-input button .material-symbols-outlined {
@@ -648,6 +648,7 @@ body * {
 .qtt-input input::-webkit-outer-spin-button, .qtt-input input::-webkit-inner-spin-button {
   -moz-appearance: textfield;
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
@@ -797,7 +798,7 @@ body * {
   gap: 8px;
 }
 
-.minicart-drawer__product-list__img {
+.product-img--small {
   border: 1px solid #cccccc;
 }
 
@@ -808,7 +809,7 @@ body * {
   display: flex;
 }
 
-.minicart-drawer__product-list__infos__name {
+.product-name--2-lines {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 14px;
@@ -841,13 +842,13 @@ body * {
   display: flex;
 }
 
-.minicart-drawer__product-list__actions__remove {
+.action-remove {
   display: flex;
 }
-.minicart-drawer__product-list__actions__remove:hover {
+.action-remove:hover {
   filter: brightness(1.5);
 }
-.minicart-drawer__product-list__actions__remove .material-symbols-outlined {
+.action-remove .material-symbols-outlined {
   color: #E2020A;
 }
 
@@ -878,4 +879,200 @@ body * {
   color: #777777;
   justify-content: center;
   display: flex;
+}
+
+.checkout-container {
+  padding-bottom: 120px;
+  display: flex;
+  gap: 24px;
+}
+
+.checkout-container * {
+  box-sizing: border-box;
+}
+
+.checkout-box {
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  background-color: #e2e2e2;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: center;
+  padding: 16px 32px;
+  border-radius: 6px;
+  flex-flow: column;
+  display: flex;
+  gap: 16px;
+}
+
+.checkout-box--left {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.checkout-box--right {
+  position: sticky;
+  top: 130.8px;
+  flex-shrink: 0;
+  width: 351.6px;
+}
+
+.checkout-text-1 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  color: #353535;
+}
+
+.checkout-product-name {
+  background: transparent;
+  display: block;
+  display: -webkit-box;
+  max-height: 35.2px;
+  font-size: 16px;
+  line-height: 1.1;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+.checkout-product-list {
+  flex-flow: column;
+  display: flex;
+  gap: 8px;
+}
+
+.checkout-product-list__item {
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 12px 32px;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  gap: 32px;
+}
+
+.checkout-img-and-title {
+  display: flex;
+  gap: 16px;
+}
+
+.checkout-box--left.price {
+  white-space: nowrap;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
+.input-field-1 {
+  align-items: flex-start;
+  flex-flow: column;
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+.input-field-1 form {
+  display: flex;
+  gap: 10px;
+}
+.input-field-1 input {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  color: #777777;
+  border-radius: 6px;
+  padding: 0 8px;
+  outline: none;
+  border: none;
+  flex-grow: 1;
+  height: 40px;
+}
+.input-field-1 input::-moz-placeholder {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  color: #777777;
+}
+.input-field-1 input::placeholder {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  color: #777777;
+}
+.input-field-1 button {
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  color: #00c29a;
+  background-color: #D9D9D9;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  border: none;
+  width: 100px;
+  height: 40px;
+}
+.input-field-1 button:hover {
+  filter: brightness(1.05);
+}
+
+.detailed-cost {
+  border-bottom: 1px solid #CFCFCF;
+  padding-bottom: 16px;
+  flex-flow: column;
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+.detailed-cost__line {
+  justify-content: space-between;
+  display: flex;
+}
+.detailed-cost__line span {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 16px;
+  color: #353535;
+}
+
+.total-cost {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+.total-cost span {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}
+
+.cta.checkout {
+  box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.15);
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.cta2.checkout {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  color: #00c29a;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  height: 40px;
+  width: 100%;
+}
+
+.tb {
+  color: #000;
 }/*# sourceMappingURL=style.css.map */
