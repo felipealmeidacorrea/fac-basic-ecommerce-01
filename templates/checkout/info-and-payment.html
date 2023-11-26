@@ -123,206 +123,208 @@
       </div>
     </header>
 
-    <main class="checkout-container container" style="width: 100%">
-      <div class="checkout-form-boxes">
-        <div class="checkout-box forms">
-          <span class="checkout-form-boxes__title"
-            ><strong>1</strong> Dados pessoais e entrega</span
-          >
+    <main  style="width: 100%">
+      <form class="checkout-container container">
+        <div class="checkout-form-boxes">
+          <div class="checkout-box forms">
+            <span class="checkout-form-boxes__title"
+              ><strong>1</strong> Dados pessoais e entrega</span
+            >
 
-          <div class="checkout-form-boxes__line">
-            <div class="checkout-form-boxes__line__input">
-              <label class="checkout-text-1" for="email">Email</label class="checkout-text-1">
-              <input type="text" name="" id="email" placeholder="email@exemplo.com"/>
-            </div>
-          </div>
-
-          <div class="checkout-form-boxes__line">
-            <div class="checkout-form-boxes__line__input">
-              <label class="checkout-text-1" for="fullName">Nome Completo</label class="checkout-text-1">
-              <input type="text" name="" id="fullName" placeholder="Ex.: José da Silva"/>
-            </div>
-          </div>
-
-          <div class="checkout-form-boxes__line">
-            <div class="checkout-form-boxes__line__input">
-              <label class="checkout-text-1" for="phone">Celular</label class="checkout-text-1">
-              <input type="text" name="" id="phone" placeholder="Ex.: (00) 00000-0000"/>
-            </div>
-          </div>
-
-          <div class="checkout-form-boxes__line">
-            <div class="checkout-form-boxes__line__input">
-              <label class="checkout-text-1" for="cep">CEP</label class="checkout-text-1">
-              <input type="text" name="" id="cep" placeholder="Ex.: 00000-000"/>
-            </div>
-
-            <div class="checkout-form-boxes__line__input">
-              <label class="checkout-text-1" for="adress">Endereço</label class="checkout-text-1">
-              <input type="text" name="" id="adress" placeholder="Ex.: Rua de exemplo"/>
-            </div>
-          </div>
-
-          <div class="checkout-form-boxes__line">
-            <div class="checkout-form-boxes__line__input">
-              <label class="checkout-text-1" for="adressNumber">Número</label class="checkout-text-1">
-              <input type="text" name="" id="adressNumber" placeholder="Número"/>
-            </div>
-
-            <div class="checkout-form-boxes__line__input">
-              <label class="checkout-text-1" for="adressNeighborhood">Bairro</label class="checkout-text-1">
-              <input type="text" name="" id="adressNeighborhood" placeholder="Bairro"/>
-            </div>
-
-            <div class="checkout-form-boxes__line__input">
-              <label class="checkout-text-1" for="adressComplement">Complemento</label class="checkout-text-1">
-              <input type="text" name="" id="adressComplement" placeholder="Ex.: Ap 14"/>
-            </div>
-          </div>
-        </div>
-
-        <div class="checkout-box forms">
-          <span class="checkout-form-boxes__title"
-            ><strong>2</strong> Pagamento</span
-          >
-
-          <div class="checkout-form-boxes__line">
-            <div class="checkout-form-boxes__line__input">
-              <label class="checkout-text-1" for="cardNumber">Número do cartão</label class="checkout-text-1">
-              <input type="number" name="" id="cardNumber" placeholder="Ex.: 0000 0000 0000 0000"/>
-            </div>
-          </div>
-
-          <div class="checkout-form-boxes__line">
-            <div class="checkout-form-boxes__line__input">
-              <label class="checkout-text-1" for="cardHolder"
-                >Nome do proprietário (como impresso no cartão)</label class="checkout-text-1"
-              >
-              <input type="text" name="" id="cardHolder" placeholder="Ex.: José da Silva"/>
-            </div>
-          </div>
-
-          <div class="checkout-form-boxes__line">
-            <div class="checkout-form-boxes__line__input installments">
-              <label class="checkout-text-1" for="installments">Parcelas</label class="checkout-text-1">
-              <select name="installments" id="installments">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-            </div>
-
-            <div class="checkout-form-boxes__line__input expiration-date">
-              <label class="checkout-text-1" for="expirationDate">Validade</label class="checkout-text-1">
-              <input type="date" name="" id="expirationDate" />
-            </div>
-          </div>
-
-          <div class="checkout-form-boxes__line">
-            <div class="checkout-form-boxes__line__input cvv">
-              <label class="checkout-text-1" for="cvv">CVV</label class="checkout-text-1">
-              <input type="number" name="" id="cvv" placeholder="Ex.: 000"/>
-            </div>
-
-            <div class="billingcheckbox">
-              <label class="checkout-text-1 db" for="sameAdressForBilling"
-                >Usar endereço da entrego como endereço de cobrança</label class="checkout-text-1"
-              ><input class="billingcheckbox" type="checkbox" id="sameAdressForBilling"/>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="checkout-box checkout-box--right">
-        <div class="summary-product-list">
-          <h4 class="checkout-text-1">Resumo</h4>
-          <ul class="summary-product-list__list">
-            <li class="summary-product-list__list__item">
-              <img
-                class="product-img--small"
-                src="https://fakeimg.pl/70x70/"
-                alt=""
-              />
-
-              <div class="summary-product-list__list__item__info">
-                <span class="summary-product-list__list__item__info__name"
-                  >Nome do produto em até uma linha</span
-                >
-                <span class="summary-product-list__list__item__info__price"
-                  >R$ 000,00</span
-                >
+            <div class="checkout-form-boxes__line">
+              <div class="checkout-form-boxes__line__input">
+                <label class="checkout-text-1" for="checkoutEmail">Email</label class="checkout-text-1">
+                <input required type="text" name="" id="checkoutEmail" placeholder="email@exemplo.com"/>
               </div>
-            </li>
+            </div>
 
-            <li class="summary-product-list__list__item">
-              <img
-                class="product-img--small"
-                src="https://fakeimg.pl/70x70/"
-                alt=""
-              />
-
-              <div class="summary-product-list__list__item__info">
-                <span class="summary-product-list__list__item__info__name"
-                  >Nome do produto em até uma linha</span
-                >
-                <span class="summary-product-list__list__item__info__price"
-                  >R$ 000,00</span
-                >
+            <div class="checkout-form-boxes__line">
+              <div class="checkout-form-boxes__line__input">
+                <label class="checkout-text-1" for="fullName">Nome Completo</label class="checkout-text-1">
+                <input required type="text" name="" id="fullName" placeholder="Ex.: José da Silva"/>
               </div>
-            </li>
+            </div>
 
-            <li class="summary-product-list__list__item">
-              <img
-                class="product-img--small"
-                src="https://fakeimg.pl/70x70/"
-                alt=""
-              />
-
-              <div class="summary-product-list__list__item__info">
-                <span class="summary-product-list__list__item__info__name"
-                  >Nome do produto em até uma linha</span
-                >
-                <span class="summary-product-list__list__item__info__price"
-                  >R$ 000,00</span
-                >
+            <div class="checkout-form-boxes__line">
+              <div class="checkout-form-boxes__line__input">
+                <label class="checkout-text-1" for="phone">Celular</label class="checkout-text-1">
+                <input required type="text" name="" id="phone" placeholder="Ex.: (00) 00000-0000"/>
               </div>
-            </li>
-          </ul>
-        </div>
+            </div>
 
-        <div class="input-field-1">
-          <label class="checkout-text-1" class="checkout-text-1" for="cupomField"
-            >Adicionar Cupom:</label class="checkout-text-1"
-          >
-          <form>
-            <input id="cupomField" type="text" placeholder="CUPOM" />
-            <button>Adicionar</button>
-          </form>
-        </div>
+            <div class="checkout-form-boxes__line">
+              <div class="checkout-form-boxes__line__input">
+                <label class="checkout-text-1" for="cep">CEP</label class="checkout-text-1">
+                <input required type="text" name="" id="cep" placeholder="Ex.: 00000-000"/>
+              </div>
 
-        <div class="detailed-cost">
-          <div class="detailed-cost__line">
-            <span>Subtotal</span>
-            <span> R$000,00</span>
+              <div class="checkout-form-boxes__line__input">
+                <label class="checkout-text-1" for="adress">Endereço</label class="checkout-text-1">
+                <input required type="text" name="" id="adress" placeholder="Ex.: Rua de exemplo"/>
+              </div>
+            </div>
+
+            <div class="checkout-form-boxes__line">
+              <div class="checkout-form-boxes__line__input">
+                <label class="checkout-text-1" for="adressNumber">Número</label class="checkout-text-1">
+                <input required type="text" name="" id="adressNumber" placeholder="Número"/>
+              </div>
+
+              <div class="checkout-form-boxes__line__input">
+                <label class="checkout-text-1" for="adressNeighborhood">Bairro</label class="checkout-text-1">
+                <input required type="text" name="" id="adressNeighborhood" placeholder="Bairro"/>
+              </div>
+
+              <div class="checkout-form-boxes__line__input">
+                <label class="checkout-text-1" for="adressComplement">Complemento</label class="checkout-text-1">
+                <input required type="text" name="" id="adressComplement" placeholder="Ex.: Ap 14"/>
+              </div>
+            </div>
           </div>
 
-          <div class="detailed-cost__line">
-            <span>Frete</span>
-            <span> R$000,00</span>
+          <div class="checkout-box forms">
+            <span class="checkout-form-boxes__title"
+              ><strong>2</strong> Pagamento</span
+            >
+
+            <div class="checkout-form-boxes__line">
+              <div class="checkout-form-boxes__line__input">
+                <label class="checkout-text-1" for="cardNumber">Número do cartão</label class="checkout-text-1">
+                <input required type="number" name="" id="cardNumber" placeholder="Ex.: 0000 0000 0000 0000"/>
+              </div>
+            </div>
+
+            <div class="checkout-form-boxes__line">
+              <div class="checkout-form-boxes__line__input">
+                <label class="checkout-text-1" for="cardHolder"
+                  >Nome do proprietário (como impresso no cartão)</label class="checkout-text-1"
+                >
+                <input required type="text" name="" id="cardHolder" placeholder="Ex.: José da Silva"/>
+              </div>
+            </div>
+
+            <div class="checkout-form-boxes__line">
+              <div class="checkout-form-boxes__line__input installments">
+                <label class="checkout-text-1" for="checkoutInstallments">Parcelas</label class="checkout-text-1">
+                <select name="checkoutInstallments" id="checkoutInstallments">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+
+              <div class="checkout-form-boxes__line__input expiration-date">
+                <label class="checkout-text-1" for="expirationDate">Validade</label class="checkout-text-1">
+                <input required type="date" name="" id="expirationDate" />
+              </div>
+            </div>
+
+            <div class="checkout-form-boxes__line">
+              <div class="checkout-form-boxes__line__input cvv">
+                <label class="checkout-text-1" for="cvv">CVV</label class="checkout-text-1">
+                <input required type="number" name="" id="cvv" placeholder="Ex.: 000"/>
+              </div>
+
+              <div class="billingcheckbox">
+                <label class="checkout-text-1 db" for="sameAdressForBilling"
+                  >Usar endereço da entrego como endereço de cobrança</label class="checkout-text-1"
+                >
+                <input class="billingcheckbox" type="checkbox" id="sameAdressForBilling"/>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div class="total-cost">
-          <span class="checkout-text-1 tb">Total</span>
-          <span class="checkout-text-1 tb"> R$000,00</span>
-        </div>
+        <div class="checkout-box checkout-box--right">
+          <div class="summary-product-list">
+            <h4 class="checkout-text-1">Resumo</h4>
+            <ul class="summary-product-list__list">
+              <li class="summary-product-list__list__item">
+                <img
+                  class="product-img--small"
+                  src="https://fakeimg.pl/70x70/"
+                  alt=""
+                />
 
-        <a class="cta checkout" href="/templates/checkout/info-and-payment.html"
-          >Finalizar</a
-        >
-        <a class="cta2 checkout" href="/templates/checkout/cart.html">Voltar</a>
-      </div>
+                <div class="summary-product-list__list__item__info">
+                  <span class="summary-product-list__list__item__info__name"
+                    >Nome do produto em até uma linha</span
+                  >
+                  <span class="summary-product-list__list__item__info__price"
+                    >R$ 000,00</span
+                  >
+                </div>
+              </li>
+
+              <li class="summary-product-list__list__item">
+                <img
+                  class="product-img--small"
+                  src="https://fakeimg.pl/70x70/"
+                  alt=""
+                />
+
+                <div class="summary-product-list__list__item__info">
+                  <span class="summary-product-list__list__item__info__name"
+                    >Nome do produto em até uma linha</span
+                  >
+                  <span class="summary-product-list__list__item__info__price"
+                    >R$ 000,00</span
+                  >
+                </div>
+              </li>
+
+              <li class="summary-product-list__list__item">
+                <img
+                  class="product-img--small"
+                  src="https://fakeimg.pl/70x70/"
+                  alt=""
+                />
+
+                <div class="summary-product-list__list__item__info">
+                  <span class="summary-product-list__list__item__info__name"
+                    >Nome do produto em até uma linha</span
+                  >
+                  <span class="summary-product-list__list__item__info__price"
+                    >R$ 000,00</span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="input-field-1">
+            <label class="checkout-text-1" class="checkout-text-1" for="cupomField"
+              >Adicionar Cupom:</label class="checkout-text-1"
+            >
+            <form>
+              <input id="cupomField" type="text" placeholder="CUPOM" />
+              <button>Adicionar</button>
+            </form>
+          </div>
+
+          <div class="detailed-cost">
+            <div class="detailed-cost__line">
+              <span>Subtotal</span>
+              <span> R$000,00</span>
+            </div>
+
+            <div class="detailed-cost__line">
+              <span>Frete</span>
+              <span> R$000,00</span>
+            </div>
+          </div>
+
+          <div class="total-cost">
+            <span class="checkout-text-1 tb">Total</span>
+            <span class="checkout-text-1 tb"> R$000,00</span>
+          </div>
+
+          <button  type="submit" class="cta checkout">Finalizar</button>
+          <a class="cta2 checkout" href="/templates/checkout/cart.html">Voltar</a>
+        </div>
+      </form>
     </main>
 
     <footer class="footer-container">
@@ -396,7 +398,7 @@
               <button id="minusc">
                 <span class="material-symbols-outlined"> remove </span>
               </button>
-              <input type="number" value="1" id="inputc" minlength="1" />
+              <input required type="number" value="1" id="inputc" minlength="1" />
               <button id="plusc">
                 <span class="material-symbols-outlined"> add </span>
               </button>
