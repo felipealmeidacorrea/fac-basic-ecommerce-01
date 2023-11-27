@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" type="text/css" href="/src/slick/slick.css" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <ul class="top-bar__text-list container">
+        <li class="top-bar__text-list__item">
+          <span>Lorem ipsum dolor sit amet</span>
+        </li>
+        <li class="top-bar__text-list__item">
+          <span>Lorem ipsum dolor sit amet</span>
+        </li>
+        <li class="top-bar__text-list__item">
+          <span>Lorem ipsum dolor sit amet</span>
+        </li>
+      </ul>
+    </div>
+    <header class="header-container sticky0">
+      <div class="header-main-content">
+        <div class="header-main-content__inner-container container">
+          <a href="/templates/index.html">
+            <img
+              class="header-main-content__inner-container__logo"
+              src="https://fakeimg.pl/120x70/"
+              alt=""
+          /></a>
+
+          <div class="checkout-progress">
+            <label class="checkout-text-1" for="checkoutProgress"
+              >Finalizar compra</label
+            >
+            <progress id="checkoutProgress" value="100" max="100"></progress>
+          </div>
+
+          <div class="header-actions">
+            <a
+              class="header-actions__shortcut"
+              href="mailto:sac@email.com.br?subject=Atendimento e-commerce&body=Olá, venho do e-commerce e preciso de ajudar com o seguinte problema:"
+            >
+              <span class="material-symbols-outlined"> support_agent </span>
+              <span>Atendimento</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header-menu">
+        <nav class="header-menu__inner container">
+          <ul class="header-menu__inner__list">
+            <li class="header-menu__inner__list__item">
+              <a
+                href="templates/plp.html"
+                class="header-menu__inner__list__item__link"
+                >Departamento</a
+              >
+            </li>
+            <li class="header-menu__inner__list__item">
+              <a
+                href="templates/plp.html"
+                class="header-menu__inner__list__item__link"
+                >Departamento</a
+              >
+            </li>
+            <li class="header-menu__inner__list__item">
+              <a
+                href="templates/plp.html"
+                class="header-menu__inner__list__item__link"
+                >Departamento</a
+              >
+            </li>
+            <li class="header-menu__inner__list__item">
+              <a
+                href="templates/plp.html"
+                class="header-menu__inner__list__item__link"
+                >Departamento</a
+              >
+            </li>
+            <li class="header-menu__inner__list__item">
+              <a
+                href="templates/plp.html"
+                class="header-menu__inner__list__item__link"
+                >Departamento</a
+              >
+            </li>
+            <li class="header-menu__inner__list__item">
+              <a
+                href="templates/plp.html"
+                class="header-menu__inner__list__item__link"
+                >Departamento</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="checkout-container container success" style="width: 100%">
+      <h1 class="checkout-success__title">Pedido finalizado com sucesso</h1>
+      <span class="checkout-success__icon material-symbols-outlined"> check_circle </span>
+      <span class="checkout-success__info">Recebemos seu pedido com sucesso, em breve você receberá em seu e-mail as informações de confirmação e de acompanhamento do pedido</span>
+      <span class="checkout-success__order-number">Pedido nº <strong id="orderNumber">000</strong></span>
+    </main>
+
+    <footer class="footer-container">
+      <div class="footer-main-content">
+        <div class="footer-main-content container">
+          <div class="footer-main-content__about-box">
+            <img
+              src="https://fakeimg.pl/120x70/"
+              alt=""
+              class="footer-main-content__about-box__logo"
+            />
+            <p class="footer-main-content__about-box__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              pretium non purus id suscipit.
+            </p>
+          </div>
+          <ul class="footer-menu footer-menu--1">
+            <li class="footer-menu__item">Menu</li>
+            <li class="footer-menu__item">Menu Item</li>
+            <li class="footer-menu__item">Menu Item</li>
+            <li class="footer-menu__item">Menu Item</li>
+          </ul>
+
+          <ul class="footer-menu footer-menu--2">
+            <li class="footer-menu__item">Menu</li>
+            <li class="footer-menu__item">Menu Item</li>
+            <li class="footer-menu__item">Menu Item</li>
+            <li class="footer-menu__item">Menu Item</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-legal-info">
+        <div class="container">
+          <p class="footer-legal-info__text">Informação de desenvolvimento</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="minicartDrawer" class="minicart-drawer dn">
+      <div class="minicart-drawer__header">
+        <p class="minicart-drawer__header__title">Meu carrinho</p>
+        <button id="minicartClose" class="minicart-drawer__header__close">
+          <span class="material-symbols-outlined"> close </span>
+        </button>
+      </div>
+
+      <ul id="minicartList" class="minicart-drawer__product-list">
+        <li class="minicart-drawer__product-list__item">
+          <img
+            class="product-img--medium"
+            src="https://fakeimg.pl/100x100/"
+            alt=""
+          />
+          <div class="minicart-drawer__product-list__infos">
+            <span class="product-name--2-lines"
+              >Nome do produto em até duas linhas</span
+            >
+
+            <span class="minicart-drawer__product-list__infos__price"
+              >R$ 000,00</span
+            >
+          </div>
+
+          <div class="minicart-drawer__product-list__actions">
+            <button class="action-remove">
+              <span class="material-symbols-outlined"> delete </span>
+            </button>
+
+            <div class="qtt-input">
+              <button id="minusc">
+                <span class="material-symbols-outlined"> remove </span>
+              </button>
+              <input type="number" value="1" id="inputc" minlength="1" />
+              <button id="plusc">
+                <span class="material-symbols-outlined"> add </span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="minicart-drawer__footer">
+        <div class="minicart-drawer__footer__total">
+          <span class="minicart-drawer__footer__total">Total:</span>
+          <span class="minicart-drawer__footer__total">R$ 000,00</span>
+        </div>
+
+        <p class="minicart-drawer__footer__info">
+          Entrega e taxas serão calculadas no checkout
+        </p>
+
+        <a
+          class="minicart-drawer__footer__cta1 cta"
+          href="/templates/checkout/cart.html"
+          >Finalizar compra</a
+        >
+        <button
+          id="minicartCloseButton"
+          class="minicart-drawer__footer__cta2 cta cta2"
+        >
+          <span class="material-symbols-outlined"> arrow_back </span> Continuar
+          comprando
+        </button>
+      </div>
+    </div>
+
+    <div id="bgLock" class="bg-lock dn"></div>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="/src/slick/slick.min.js"></script>
+    <script src="/js/slick-initializer.js"></script>
+    <script src="/js/base-script.js"></script>
+  </body>
+</html>

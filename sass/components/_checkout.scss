@@ -269,3 +269,27 @@
     content: "\2713";
   }
 }
+
+.checkout-container.success {
+  align-items: center;
+  flex-flow: column;
+  display: flex;
+}
+
+.checkout-success__title {
+  @include text(32px, $text-pure-500, bold);
+}
+
+
+.checkout-success__icon.material-symbols-outlined {
+  color: $support-1;
+  font-size: 132px;
+}
+
+.checkout-success__info {
+  @include text(16px, $text-pure-500, normal);
+}
+
+.checkout-success__order-number {
+  @include text(16px, $text-pure-500, bold);
+}
