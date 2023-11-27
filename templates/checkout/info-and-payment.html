@@ -42,34 +42,16 @@
               alt=""
           /></a>
 
-          <search class="search-bar">
-            <form class="search-bar-inner">
-              <input
-                class="search-bar__input-box"
-                type="text"
-                id="search"
-                name="busca"
-                placeholder="O que você procura?"
-              />
-              <button class="search-bar__submit-button" type="submit">
-                <span class="material-symbols-outlined"> search </span>
-              </button>
-            </form>
-          </search>
+         <div class="checkout-progress">
+          <label class="checkout-text-1" for="checkoutProgress">Finalizar compra</label>
+          <progress id="checkoutProgress" value="90" max="100"></progress>
+         </div>
 
           <div class="header-actions">
             <a class="header-actions__shortcut" href="mailto:sac@email.com.br?subject=Atendimento e-commerce&body=Olá, venho do e-commerce e preciso de ajudar com o seguinte problema:">
               <span class="material-symbols-outlined"> support_agent </span>
               <span>Atendimento</span>
             </a>
-            <button
-              id="minicartIcon"
-              title="minicart"
-              class="header-actions__minicart"
-            >
-              <span id="minicartQtt" class="cart-qtt">0</span>
-              <span class="material-symbols-outlined"> shopping_cart </span>
-            </button>
           </div>
         </div>
       </div>
@@ -228,7 +210,7 @@
 
               <div class="billingcheckbox">
                 <label class="checkout-text-1 db" for="sameAdressForBilling"
-                  >Usar endereço da entrego como endereço de cobrança</label class="checkout-text-1"
+                  >Usar endereço da entrega como endereço de cobrança</label class="checkout-text-1"
                 >
                 <input class="billingcheckbox" type="checkbox" id="sameAdressForBilling"/>
               </div>
@@ -298,10 +280,10 @@
             <label class="checkout-text-1" class="checkout-text-1" for="cupomField"
               >Adicionar Cupom:</label class="checkout-text-1"
             >
-            <form>
+            <div class="input-field-1__coupom">
               <input id="cupomField" type="text" placeholder="CUPOM" />
               <button>Adicionar</button>
-            </form>
+            </div>
           </div>
 
           <div class="detailed-cost">

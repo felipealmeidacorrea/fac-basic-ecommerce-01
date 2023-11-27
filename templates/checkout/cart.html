@@ -42,34 +42,16 @@
               alt=""
           /></a>
 
-          <search class="search-bar">
-            <form class="search-bar-inner">
-              <input
-                class="search-bar__input-box"
-                type="text"
-                id="search"
-                name="busca"
-                placeholder="O que você procura?"
-              />
-              <button class="search-bar__submit-button" type="submit">
-                <span class="material-symbols-outlined"> search </span>
-              </button>
-            </form>
-          </search>
+         <div class="checkout-progress">
+          <label class="checkout-text-1" for="checkoutProgress">Finalizar compra</label>
+          <progress id="checkoutProgress" value="50" max="100"></progress>
+         </div>
 
           <div class="header-actions">
             <a class="header-actions__shortcut" href="mailto:sac@email.com.br?subject=Atendimento e-commerce&body=Olá, venho do e-commerce e preciso de ajudar com o seguinte problema:">
               <span class="material-symbols-outlined"> support_agent </span>
               <span>Atendimento</span>
             </a>
-            <button
-              id="minicartIcon"
-              title="minicart"
-              class="header-actions__minicart"
-            >
-              <span id="minicartQtt" class="cart-qtt">0</span>
-              <span class="material-symbols-outlined"> shopping_cart </span>
-            </button>
           </div>
         </div>
       </div>
@@ -224,7 +206,7 @@
           <label class="checkout-text-1" for="cupomField"
             >Adicionar Cupom:</label
           >
-          <form>
+          <form class="input-field-1__coupom">
             <input id="cupomField" type="text" placeholder="CUPOM" />
             <button>Adicionar</button>
           </form>
@@ -234,7 +216,7 @@
           <label class="checkout-text-1" for="shippingField"
             >Calcular o frete:</label
           >
-          <form>
+          <form class="input-field-1__shipping">
             <input id="shippingField" type="text" placeholder="CEP" />
             <button>Calcular</button>
           </form>

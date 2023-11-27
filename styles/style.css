@@ -264,6 +264,50 @@ body * {
   padding: 10px 16px;
 }
 
+.checkout-progress {
+  align-items: center;
+  flex-flow: column;
+  display: flex;
+  gap: 8px;
+}
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 250px;
+  height: 20px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left, #00529E, #001529);
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+progress {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Get rid of default border in Firefox. */
+  border: none;
+  /* Dimensions */
+  width: 250px;
+  height: 20px;
+}
+
+progress::-moz-progress-bar {
+  background-image: -moz-linear-gradient(135deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)), -moz-linear-gradient(left, #00529E, #001529);
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
 .banner-slider {
   margin-bottom: 60px;
 }
@@ -974,7 +1018,7 @@ body * {
   width: 100%;
   gap: 8px;
 }
-.input-field-1 form {
+.input-field-1__coupom, .input-field-1__shipping {
   display: flex;
   gap: 10px;
 }
