@@ -1,120 +1,120 @@
-$(document).ready(function () {
-  function setupCounter(minusButtonID, plusButtonID, inputFieldID) {
-    const minusButton = document.getElementById(minusButtonID);
-    const plusButton = document.getElementById(plusButtonID);
-    const inputField = document.getElementById(inputFieldID);
+// Função para formatar o input no padrão desejado
+function formatZipCode(input) {
+  // Remove todos os caracteres que não são dígitos
+  let sanitizedInput = input.replace(/\D/g, '');
 
-    // Verifica se os elementos foram encontrados
-    if (minusButton && plusButton && inputField) {
-      minusButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        const currentValue = Number(inputField.value) || 0;
-        if (currentValue > 1) {
-          inputField.value = currentValue - 1;
-        }
-      });
-
-      plusButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        const currentValue = Number(inputField.value) || 0;
-        inputField.value = currentValue + 1;
-      });
-    }
+  // Adiciona o hífen no quinto caractere se o comprimento for maior que 5
+  if (sanitizedInput.length > 5) {
+    sanitizedInput = sanitizedInput.replace(/(\d{5})(\d{0,3})/, '$1-$2');
   }
 
-  // Para os elementos com "c" no final
-  setupCounter("minusc", "plusc", "inputc");
+  // Limita o comprimento total para 9 caracteres
+  return sanitizedInput.slice(0, 9);
+}
 
-  // Para os elementos sem "c" no final
-  setupCounter("minus", "plus", "input");
+// Obter o elemento com o ID "shippingField"
+var shippingField = document.getElementById('shippingField');
 
-   // Para os elementos sem "c" no final
-   setupCounter("minusa", "plusa", "inputa");
+// Verificar se o elemento existe antes de usar o manipulador
+if (shippingField) {
+  // Manipulador de evento que formata o input enquanto o usuário escreve
+  shippingField.addEventListener('input', function (event) {
+    // Obter o valor atual do input
+    let inputValue = event.target.value;
 
-  function drawer() {
-    // Seletor para o botão com o ID "minicartIcon"
-    var openButton = $("#minicartIcon");
+    // Formatar o valor como desejado
+    let formattedValue = formatZipCode(inputValue);
 
-    // Seletor para o elemento com o ID "minicartDrawer"
-    var minicartDrawer = $("#minicartDrawer");
+    // Atualizar o valor do input
+    event.target.value = formattedValue;
+  });
+} else {
+  console.log('Elemento #shippingField não encontrado. A função não será executada.');
+}
 
-    // Seletor para os elementos com os IDs "#minicartClose" e "#minicartCloseButton"
-    var closeButton = $("#minicartClose, #minicartCloseButton");
+// Função para configurar os contadores
+function setupCounter(minusButtonID, plusButtonID, inputFieldID) {
+  const minusButton = document.getElementById(minusButtonID);
+  const plusButton = document.getElementById(plusButtonID);
+  const inputField = document.getElementById(inputFieldID);
 
-    // Seletor para o elemento com o ID "bgLock"
-    var bgLock = $("#bgLock");
+  // Verificar se os elementos foram encontrados
+  if (minusButton && plusButton && inputField) {
+    minusButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      const currentValue = Number(inputField.value) || 0;
+      if (currentValue > 1) {
+        inputField.value = currentValue - 1;
+      }
+    });
 
-    // Verifica se o botão "minicartIcon" foi encontrado
-    if (openButton.length === 0) {
-      console.log(
-        "Elemento #minicartIcon não encontrado. A função não será executada."
-      );
-      return;
-    }
+    plusButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      const currentValue = Number(inputField.value) || 0;
+      inputField.value = currentValue + 1;
+    });
+  }
+}
 
+// Para os elementos sem "c" no final
+setupCounter('minus', 'plus', 'input');
+
+// Para os elementos com "a" no final
+setupCounter('minusa', 'plusa', 'inputa');
+
+// Para os elementos com "a" no final
+setupCounter('minusc', 'plusc', 'inputc');
+
+// Função para o drawer (gaveta) do carrinho
+function drawer() {
+  // Seletor para o botão com o ID "minicartIcon"
+  var openButton = document.getElementById('minicartIcon');
+
+  // Seletor para o elemento com o ID "minicartDrawer"
+  var minicartDrawer = document.getElementById('minicartDrawer');
+
+  // Seletor para os elementos com os IDs "minicartClose" e "minicartCloseButton"
+  var closeButton = document.querySelectorAll('#minicartClose, #minicartCloseButton');
+
+  // Seletor para o elemento com o ID "bgLock"
+  var bgLock = document.getElementById('bgLock');
+
+  // Verificar se o botão "minicartIcon" foi encontrado
+  if (openButton) {
     // Função para adicionar a classe "open" e remover a classe "dn" do carrinho
     function openCart() {
-      minicartDrawer.removeClass("dn");
-      minicartDrawer.addClass("open");
-      $("body").css("overflow", "hidden");
-      bgLock.removeClass("dn").addClass("df");
+      minicartDrawer.classList.remove('dn');
+      minicartDrawer.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      bgLock.classList.remove('dn');
+      bgLock.classList.add('df');
     }
 
     // Função para fechar o carrinho
     function closeCart() {
-      minicartDrawer.removeClass("open");
-      minicartDrawer.addClass("dn");
-      $("body").css({ overflowY: "auto", overflowX: "hidden" });
-      bgLock.removeClass("df").addClass("dn");
+      minicartDrawer.classList.remove('open');
+      minicartDrawer.classList.add('dn');
+      document.body.style.overflowY = 'auto';
+      document.body.style.overflowX = 'hidden';
+      bgLock.classList.remove('df');
+      bgLock.classList.add('dn');
     }
 
     // Adicionar ouvinte de eventos para o botão "minicartIcon"
-    openButton.on("click", openCart);
+    openButton.addEventListener('click', openCart);
 
     // Adicionar ouvinte de eventos para os botões de fechar
-    closeButton.on("click", closeCart);
+    closeButton.forEach(function (button) {
+      button.addEventListener('click', closeCart);
+    });
 
     // Adicionar ouvinte de eventos para o elemento "bgLock"
-    bgLock.on("click", closeCart);
-
-    // Mais funcionalidades aqui conforme necessário
-  }
-
-  // Função para formatar o input no padrão desejado
-  function formatZipCode(input) {
-    // Remove todos os caracteres que não são dígitos
-    let sanitizedInput = input.replace(/\D/g, "");
-
-    // Adiciona o hífen no quinto caractere se o comprimento for maior que 5
-    if (sanitizedInput.length > 5) {
-      sanitizedInput = sanitizedInput.replace(/(\d{5})(\d{0,3})/, "$1-$2");
-    }
-
-    // Limita o comprimento total para 9 caracteres
-    return sanitizedInput.slice(0, 9);
-  }
-
-  // Pega o elemento com o ID "shippingField"
-  var shippingField = document.getElementById("shippingField");
-
-  // Verifica se o elemento existe antes de usar o manipulador
-  if (shippingField) {
-    // Manipulador de evento q formata o input enquanto o usuário escreve
-    shippingField.addEventListener("input", function (event) {
-      // Pega o valor atual do input
-      let inputValue = event.target.value;
-
-      // Formata o valor como a gente quer
-      let formattedValue = formatZipCode(inputValue);
-
-      // Atualiza o valor do input
-      event.target.value = formattedValue;
-    });
+    bgLock.addEventListener('click', closeCart);
   } else {
-    console.log(
-      "Elemento #shippingField não encontrado. A função não será executada."
-    );
+    console.log('Elemento #minicartIcon não encontrado. A função não será executada.');
   }
 
-  drawer();
-});
+  // Mais funcionalidades aqui conforme necessário
+}
+
+drawer();
