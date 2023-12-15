@@ -60,6 +60,8 @@
 .product-name--2-lines {
   @include text(14px, $text-pure-500, 400);
   @include multiline-ellipsis(14px, 1.1, 2);
+  max-width: 106.4px;
+  width: 106.4px;
 }
 
 .minicart-drawer__product-list__infos__price {

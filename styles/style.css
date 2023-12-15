@@ -459,6 +459,10 @@ progress::-moz-progress-bar {
   gap: 16px;
 }
 
+.banner-group-with-title__list__item img {
+  border-radius: 6px;
+}
+
 .banner-group__list__item img {
   border-radius: 6px;
 }
@@ -870,6 +874,8 @@ progress::-moz-progress-bar {
   overflow: hidden;
   text-overflow: ellipsis;
   text-overflow: -o-ellipsis-lastline;
+  max-width: 106.4px;
+  width: 106.4px;
 }
 
 .minicart-drawer__product-list__infos__price {
